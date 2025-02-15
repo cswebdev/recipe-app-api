@@ -4,6 +4,9 @@ services:
   app:
     build:
       context: .
+      ## DEV=false by default via the Dockerfile
+      args:
+        - DEV=true
     ports:
       - "8000:8000"
     volumes:
